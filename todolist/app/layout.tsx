@@ -20,7 +20,7 @@ export default function RootLayout({
       <body className={styles.body_wrap}>
         <Header />
         <main className={styles.body_main}>
-          <Providers children={children} />
+          <Providers>{children}</Providers>
         </main>
         <Footer />
       </body>

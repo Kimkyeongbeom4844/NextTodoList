@@ -7,7 +7,6 @@ export const store = configureStore({
     counter,
     list,
   },
-  devTools: true,
 });
 
 // Infer the `RootState` and `AppDispatch` types from the store itself

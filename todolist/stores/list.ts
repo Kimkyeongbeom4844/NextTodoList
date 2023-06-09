@@ -9,7 +9,7 @@ const initialState: InitialState = {
   list: [],
 };
 
-export const listSlice = createSlice({
+const listSlice = createSlice({
   name: "list",
   initialState,
   reducers: {
