@@ -1,0 +1,5 @@
+.footer_wrap {
+  display: flex;
+  background-color: var(---53baef-서브컬러);
+  border-top: 1px solid var(---53baef-서브컬러);
+}

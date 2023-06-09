@@ -1,0 +1,12 @@
+.header_wrap {
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  background-color: var(---53baef-서브컬러);
+  font-size: var(--unnamed-font-size-18);
+  font-weight: bold;
+}
+.header_title {
+  align-self: center;
+}

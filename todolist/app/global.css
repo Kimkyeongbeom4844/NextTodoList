@@ -1,0 +1,17 @@
+:root {
+  ---999999-그레이: #999999;
+  ---dddddd-라이트그레이: #dddddd;
+  ---ffffff-화이트: #ffffff;
+  ---53baef-서브컬러: #53baef;
+  ---000000-블랙: #000000;
+  ---196ff2-메인컬러: #196ff2;
+  ---e4e9ec-라인: #e4e9ec;
+  --unnamed-font-size-14: 14px;
+  --unnamed-font-size-16: 16px;
+  --unnamed-font-size-18: 18px;
+  --unnamed-font-size-28: 28px;
+  --unnamed-font-size-38: 38px;
+}
+button {
+  cursor: pointer;
+}
