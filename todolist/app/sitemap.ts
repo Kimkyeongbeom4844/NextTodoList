@@ -3,7 +3,11 @@ import { MetadataRoute } from "next";
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: "http://localhost:3003",
+      url: `${process.env.DOMAIN}`,
+      lastModified: new Date(),
+    },
+    {
+      url: `${process.env.DOMAIN}/mysql`,
       lastModified: new Date(),
     },
   ];
