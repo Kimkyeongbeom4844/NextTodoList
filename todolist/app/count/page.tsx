@@ -8,7 +8,7 @@ const Home = () => {
   const count = useSelector((state: RootState) => state.counter.value);
   const dispatch = useDispatch();
   const [inputValue, setInputValue] = useState(0);
-  const test = (e) => {
+  const test = (e: { currentTarget: { value: string | number } }) => {
     setInputValue(Number(e.currentTarget.value));
   };
   const up = () => {

@@ -9,15 +9,19 @@ const Home = () => {
   const listStore = useSelector((state: RootState) => state.list);
   const dispatch = useDispatch();
 
-  const onChangeInputText = (e) => {
+  const onChangeInputText = (e: {
+    target: { value: React.SetStateAction<string> };
+  }) => {
     setInputText(e.target.value);
   };
-  const onSubmitInputText = (e) => {
+  const onSubmitInputText = (e: { preventDefault: () => void }) => {
     e.preventDefault();
     dispatch(addList(inputText));
     setInputText("");
   };
-  const onClickDeleteButton = (e) => {
+  const onClickDeleteButton = (e: {
+    currentTarget: { dataset: { index: number } };
+  }) => {
     dispatch(deleteList(e.currentTarget.dataset.index));
   };
   return (
