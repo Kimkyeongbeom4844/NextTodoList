@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { DataHTMLAttributes, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import type { RootState } from "@/stores";
 import { addList, deleteList } from "@/stores/list";
@@ -9,9 +9,7 @@ const Home = () => {
   const listStore = useSelector((state: RootState) => state.list);
   const dispatch = useDispatch();
 
-  const onChangeInputText = (e: {
-    target: { value: React.SetStateAction<string> };
-  }) => {
+  const onChangeInputText = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInputText(e.target.value);
   };
   const onSubmitInputText = (e: { preventDefault: () => void }) => {
@@ -19,9 +17,7 @@ const Home = () => {
     dispatch(addList(inputText));
     setInputText("");
   };
-  const onClickDeleteButton = (e: {
-    currentTarget: { dataset: { index: number } };
-  }) => {
+  const onClickDeleteButton = (e: React.SyntheticEvent<any>) => {
     dispatch(deleteList(e.currentTarget.dataset.index));
   };
   return (
