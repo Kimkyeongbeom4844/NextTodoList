@@ -6,7 +6,7 @@ import {
 } from "@/stores/mysqlList";
 import React, { useState } from "react";
 
-export default function page() {
+export default function Page() {
   const [inputText, setInputText] = useState("");
   const {
     data: getListData,
