@@ -1,7 +1,5 @@
 import React from "react";
 
-const page = () => {
+export default function page() {
   return <div>여긴 mysql</div>;
-};
-
-export default page;
+}

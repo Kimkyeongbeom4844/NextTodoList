@@ -1,13 +1,13 @@
 "use client";
-import React, { DataHTMLAttributes, useState } from "react";
+import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import type { RootState } from "@/stores";
+import type { AppDispatch, RootState } from "@/stores";
 import { addList, deleteList } from "@/stores/list";
 
-const Home = () => {
+export default function Page() {
   const [inputText, setInputText] = useState("");
   const listStore = useSelector((state: RootState) => state.list);
-  const dispatch = useDispatch();
+  const dispatch: AppDispatch = useDispatch();
 
   const onChangeInputText = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInputText(e.target.value);
@@ -38,6 +38,4 @@ const Home = () => {
       </ul>
     </>
   );
-};
-
-export default Home;
+}

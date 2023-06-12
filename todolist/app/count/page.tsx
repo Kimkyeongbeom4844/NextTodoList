@@ -4,7 +4,7 @@ import type { RootState } from "@/stores";
 import { useSelector, useDispatch } from "react-redux";
 import { decrement, increment, incrementByAmount } from "@/stores/counter";
 
-const Home = () => {
+export default function Page() {
   const count = useSelector((state: RootState) => state.counter.value);
   const dispatch = useDispatch();
   const [inputValue, setInputValue] = useState(0);
@@ -35,5 +35,4 @@ const Home = () => {
       </div>
     </div>
   );
-};
-export default Home;
+}
