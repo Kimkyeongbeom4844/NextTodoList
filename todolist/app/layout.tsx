@@ -6,8 +6,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-  title: "넥스트로 만든 투두리스트",
-  description: "SEO까지 최적화된 투두리스트",
+  title: "Next로 만든 투두리스트",
+  description: "SEO까지 최적화된 Next 투두리스트",
 };
 
 export default function RootLayout({
