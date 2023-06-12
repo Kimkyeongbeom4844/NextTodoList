@@ -7,5 +7,4 @@ export default function NotFound() {
   useEffect(() => {
     router.push("/");
   }, []);
-  return <></>;
 }
