@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import { useState } from "react";
 import type { RootState } from "@/stores";
 import { useSelector, useDispatch } from "react-redux";
 import { decrement, increment, incrementByAmount } from "@/stores/counter";

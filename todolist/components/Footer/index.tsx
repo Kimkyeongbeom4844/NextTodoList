@@ -1,7 +1,6 @@
-import React from "react";
+import styles from "./styles.module.css";
 import Image from "next/image";
 import logo from "@/public/devJeans.png";
-import styles from "./styles.module.css";
 
 export default function Footer() {
   const link = "https://github.com/Kimkyeongbeom4844/NextTodoList";
