@@ -83,9 +83,9 @@ export default function RootLayout({ children } : { children : React.ReactNode }
 공식문서를 보면 RTK는 `stores/features`내부에 RTK Query는 `stores/services`내부에 배치되어 있다.
 
 ```bash
-stores---- features - ..
-        |- services - ..
-        |- store.ts(index.ts)
+stores---- features - exampleSlice.ts
+        |- services - exampleApi.ts
+        |- store.ts
 ```
 
 개인적으로 RTK보다 [`RTK Query`](https://redux-toolkit.js.org/rtk-query/overview)쪽이 이해하는데 꽤 걸렸다.
@@ -95,7 +95,11 @@ stores---- features - ..
 import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit"; // RTK에서 제공해주는 payload타입
 
-const initialState = {
+type InitialState = {
+  list: (string | number)[];
+};
+
+const initialState: InitialState = {
   list: [],
 };
 
