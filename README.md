@@ -11,6 +11,7 @@ Next13을 학습할겸 만들어본 투두리스트
 ```
 Next13
 RTK
+RTK Query
 typescript
 <!-- mysql2 -->
 ```
