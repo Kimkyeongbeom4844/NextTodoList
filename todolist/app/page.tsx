@@ -17,7 +17,7 @@ export default function Page() {
     dispatch(addList(inputText));
     setInputText("");
   };
-  const onClickDeleteButton = (e: React.SyntheticEvent<any>) => {
+  const onClickDeleteButton = (e: React.MouseEvent<any>) => {
     dispatch(deleteList(e.currentTarget.dataset.index));
   };
   return (
