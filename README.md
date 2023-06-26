@@ -79,7 +79,7 @@ export default function RootLayout({ children } : { children : React.ReactNode }
 이제 첫 랜더링은 SSR방식으로 이후는 CSR방식으로 처리할 수 있다
 
 - ## @reduxjs/toolkit
-  줄여서 `RTK`라고 부르며 추가적으로 제공해주는 `RTK Query`를 통해 비동기 처리를 쉽게 할 수 있다.
+줄여서 `RTK`라고 부르며 추가적으로 제공해주는 `RTK Query`를 통해 비동기 처리를 쉽게 할 수 있다.
 
 공식문서를 보면 RTK는 `stores/features`내부에 RTK Query는 `stores/services`내부에 배치되어 있다.
 
