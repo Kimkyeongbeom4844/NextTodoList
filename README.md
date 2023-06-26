@@ -37,14 +37,13 @@ kimkyeongbeom4844
 그리고 `Provider` 래퍼 컴포넌트에 `RootLayout`의 `children`을 `Props`로 넘겨주면 끝
 
 ```typescript
-// @/stores/Providers.tsx -> Provider는 존재하므로 이름은 Providers로 지엇다
 "use client";
 
-import { Provider } from "react-redux";
+import { Provider as ProviderWrap } from "react-redux";
 import { store } from "@/stores";
 
-export default function Providers({ children } : { children : React.ReactNode }) {
-  return <Provider store={store}>{children}</Provider>;
+export default function Provider({ children } : { children : React.ReactNode }) {
+  return <ProviderWrap store={store}>{children}</ProviderWrap>;
 }
 
 
@@ -52,7 +51,7 @@ export default function Providers({ children } : { children : React.ReactNode })
 import "./reset.css";
 import "./global.css";
 import styles from "./layout.module.css";
-import Providers from '@/stores/Providers';
+import Provider from '@/stores/Providers';
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -67,7 +66,7 @@ export default function RootLayout({ children } : { children : React.ReactNode }
       <body>
         <Header/>
         <main>
-          <Provider>{ children }</Providers>
+          <Provider>{ children }</Provider>
         </main>
         <Footer/>
       </body>
