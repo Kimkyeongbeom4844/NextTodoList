@@ -37,6 +37,7 @@ kimkyeongbeom4844
 그리고 `Provider` 래퍼 컴포넌트에 `RootLayout`의 `children`을 `Props`로 넘겨주면 끝
 
 ```typescript
+//@/stores/Provider.tsx
 "use client";
 
 import { Provider as ProviderWrap } from "react-redux";
