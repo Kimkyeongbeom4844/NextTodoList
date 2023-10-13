@@ -127,7 +127,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react"; // rea
 
 export const listApi = createApi({
   reducerPath: "listApi", // createSlice의 name이라 생각하자
-  tagTypes: ["list"], // 캐시 키워드 배열
+  tagTypes: ["list"], // 캐시 키워드 배열(여기에 있는 type값들이 아래 query의 provideTags랑 mutation의 invalidatesTags에서 써먹는다)
   refetchOnFocus: false, // 화면 밖 포커스 후 다시 화면 안 포커스시 리패치 여부
   refetchOnReconnect: true, // 패치 요청 실패 및 에러 또는 네트워크 재 연결 시 리패치 여부
   refetchOnMountOrArgChange: false, // 컴포넌트 마운트 시 리패치 여부
@@ -136,7 +136,9 @@ export const listApi = createApi({
     //endPoints내부 값들은 use+이름+메소드의 형식으로 Hook이 정의됨
     getList: builder.query<any, null>({
       //.query는 get요청 담당
-      query: () => "/api/list",
+      query: () => ({
+        url : "/api/list",
+      }),
       providesTags: ["list"], //.query는 providesTags를 사용하며 여기에 의존성 tag를 주입
     }),
     postList: builder.mutation<any, { title: string }>({
